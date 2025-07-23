@@ -36,6 +36,10 @@ inputs:
     description: "분석만 수행하고 아티팩트 업로드/PR 코멘트 생략"
     required: false
     default: "false"
+  debug:
+    description: "디버그 모드 활성화 여부"
+    required: false
+    default: "false"
 
 outputs:
   olive-version:
@@ -102,7 +106,8 @@ runs:
           --project-name \"${{ steps.set-project-name.outputs.project-name }}\" \
           --olive-token ${{ inputs.olive-token }} \
           --source-path ${{ inputs.source-path }} \
-          --user-config-path \"${{ inputs.user-config-path }}\""
+          --user-config-path \"${{ inputs.user-config-path }}\" \
+          --debug ${{ inputs.debug }}"
 
     - name: Step 3 - Olive CLI analyze
       id: analyze
