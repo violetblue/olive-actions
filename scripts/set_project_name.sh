@@ -1,6 +1,10 @@
 #!/bin/bash
 set -e
 
+echo "════════════════════════════════════════════════════════════════════════════════"
+echo "📝 STEP 1: Project Name Setting"
+echo "════════════════════════════════════════════════════════════════════════════════"
+
 INPUT_PROJECT_NAME=""
 GITHUB_REPOSITORY=""
 
@@ -32,4 +36,9 @@ if [ -n "$GITHUB_OUTPUT" ] && [ -f "$GITHUB_OUTPUT" ]; then
   echo "project-name=$PROJECT_NAME" >> $GITHUB_OUTPUT
 else
   echo "::set-output name=project-name::$PROJECT_NAME"
-fi 
+fi
+
+echo "════════════════════════════════════════════════════════════════════════════════"
+echo "✅ Project Name Setting Complete"
+echo "════════════════════════════════════════════════════════════════════════════════"
+echo "" 

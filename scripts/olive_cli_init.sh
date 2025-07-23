@@ -36,7 +36,10 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
-echo '📋 Step 2: Initializing Olive CLI...'
+echo "════════════════════════════════════════════════════════════════════════════════"
+echo "🔧 STEP 3: OLIVE CLI Initialization"
+echo "════════════════════════════════════════════════════════════════════════════════"
+echo '📋 Initializing Olive CLI...'
 
 # debug 옵션 설정
 DEBUG_OPTION=""
@@ -78,3 +81,8 @@ if [ -f "$LOCAL_CONFIG_FILE" ]; then
 else
   echo '⚠️ 경고: local-config.yaml 파일을 찾을 수 없습니다. jdk11Home 설정을 건너뜁니다.'
 fi
+
+echo "════════════════════════════════════════════════════════════════════════════════"
+echo "✅ OLIVE CLI Initialization Complete"
+echo "════════════════════════════════════════════════════════════════════════════════"
+echo ""
