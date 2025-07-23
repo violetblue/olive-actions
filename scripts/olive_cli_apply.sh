@@ -2,7 +2,7 @@
 set -e 
 
 echo "════════════════════════════════════════════════════════════════════════════════"
-echo "🚀 STEP 7: OLIVE CLI Apply"
+echo "🚀 STEP 8: OLIVE CLI Apply"
 echo "════════════════════════════════════════════════════════════════════════════════"
 echo '📋 Running apply on repository...'
 olive-cli apply

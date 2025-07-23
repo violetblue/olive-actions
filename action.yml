@@ -73,6 +73,13 @@ runs:
           --sha "${{ github.sha }}" \
           --workspace "${{ github.workspace }}"
 
+    - name: Validate required tokens
+      shell: bash
+      run: |
+        ${{ github.action_path }}/scripts/validate_tokens.sh \
+          --github-token "${{ inputs.github-token }}" \
+          --olive-token "${{ inputs.olive-token }}"
+
     - name: Set project name
       id: set-project-name
       shell: bash

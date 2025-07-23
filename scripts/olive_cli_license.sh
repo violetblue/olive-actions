@@ -2,7 +2,7 @@
 set -e 
 
 echo "════════════════════════════════════════════════════════════════════════════════"
-echo "📄 STEP 6: OLIVE CLI License Analysis"
+echo "📄 STEP 7: OLIVE CLI License Analysis"
 echo "════════════════════════════════════════════════════════════════════════════════"
 echo '📋 Running license on repository...'
 

@@ -37,7 +37,7 @@ while [[ $# -gt 0 ]]; do
 done
 
 echo "════════════════════════════════════════════════════════════════════════════════"
-echo "🔧 STEP 3: OLIVE CLI Initialization"
+echo "🔧 STEP 4: OLIVE CLI Initialization"
 echo "════════════════════════════════════════════════════════════════════════════════"
 echo '📋 Initializing Olive CLI...'
 

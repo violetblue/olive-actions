@@ -2,7 +2,7 @@
 set -e
 
 echo "════════════════════════════════════════════════════════════════════════════════"
-echo "🧩 STEP 5: OLIVE CLI Component Analysis"
+echo "🧩 STEP 6: OLIVE CLI Component Analysis"
 echo "════════════════════════════════════════════════════════════════════════════════"
 echo '📋 Running component on repository...'
 

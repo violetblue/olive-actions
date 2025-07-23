@@ -2,7 +2,7 @@
 set -e
 
 echo "════════════════════════════════════════════════════════════════════════════════"
-echo "📊 STEP 4: OLIVE CLI Analysis"
+echo "📊 STEP 5: OLIVE CLI Analysis"
 echo "════════════════════════════════════════════════════════════════════════════════"
 echo '📋 Running analysis on repository...'
 olive-cli analyze --mapping

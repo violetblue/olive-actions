@@ -2,7 +2,7 @@
 set -e
 
 echo "════════════════════════════════════════════════════════════════════════════════"
-echo "🔍 STEP 2: Source Code Location Verification"
+echo "🔍 STEP 3: Source Code Location Verification"
 echo "════════════════════════════════════════════════════════════════════════════════"
 echo '📋 Verifying source code location...'
 echo 'Current working directory:' && pwd
