@@ -1,20 +1,38 @@
-# OLIVE CLI Scanner Action
+# OLIVE Action
 
-Kakao [OLIVE CLI](https://github.com/kakao/olive-cli)를 사용하여 소스코드 의존성을 분석합니다.  
-분석된 결과를 [OLIVE Platform](https://olive.kakao.com/)에 적용해서 확인할 수 있습니다.  
-또한 PR에 액션 수행 결과를 코멘트로 남겨서 확인할 수 있습니다.  
-이 액션은 Docker 컨테이너 환경에서 [OLIVE CLI](https://github.com/kakao/olive-cli)를 실행하여 의존성을 분석하고, 결과를 아티팩트로 저장합니다.
+**OLIVE Action**은 GitHub Actions에서 [OLIVE CLI](https://github.com/kakao/olive-cli)를 사용하여 오픈소스 라이선스 의무사항을 준수를 지원합니다.
 
-## 사용법
+이 Action을 통해 다음을 수행할 수 있습니다.
 
-### 기본 입력값
+  * **자동 의존성 분석**: Pull Request 생성시 소스코드 의존성을 분석합니다.
 
-| 이름 | 설명 | 기본값 |
-|------|------|--------|
-| `olive-token` | [OLIVE Platform](https://olive.kakao.com/) API 토큰<br>[토큰 설정하기](https://olive.kakao.com/docs/my-page/token) 가이드를 참고해서 반드시 [GitHub Secrets](https://docs.github.com/ko/actions/how-tos/writing-workflows/choosing-what-your-workflow-does/using-secrets-in-github-actions)에 저장하여 사용하세요. | 필수 |
-| `github-token` | PR에 코멘트를 작성하기 위한 GitHub 토큰<br>일반적으로 `${{ secrets.GITHUB_TOKEN }}`을 사용합니다. | 필수 |
+  * **PR 코멘트 리포팅**: 분석 결과를 PR에 코멘트로 남겨 변경 사항을 바로 확인할 수 있습니다.
 
-### 기본 사용법 (PR 생성시 자동 실행)
+  * **OLIVE Platform 연동**: 분석 결과를 [OLIVE Platform](https://olive.kakao.com/)으로 전송하여 오픈소스 라이선스 및 취약점을 관리합니다.
+
+  * **분석 결과 저장**: 상세 분석 결과는 GitHub Artifacts로 저장합니다.
+
+> 이 Action은 Docker 컨테이너 환경에서 OLIVE CLI를 실행합니다.
+
+
+## 사전 준비 (Prerequisites)
+
+Action을 사용하기 전에, [OLIVE Platform](https://olive.kakao.com/)에서 **API 토큰**을 발급받아야 합니다.
+
+1.  [OLIVE Platform 토큰 발급 가이드](https://olive.kakao.com/docs/my-page/token)를 참고하여 토큰을 발급합니다.
+
+2.  발급받은 토큰을 저장소 secret 으로 추가합니다. (예시에서 사용한 이름은 `OLIVE_TOKEN` 입니다.)
+    - (참고) [GitHub Actions에서 secret 사용하기](https://docs.github.com/ko/actions/security-guides/using-secrets-in-github-actions)
+
+
+## 기본 사용법 (Quick Start)
+
+
+아래는 `main` 또는 `develop` 브랜치로 Pull Request가 생성될 때마다 의존성을 분석하는 가장 기본적인 워크플로우 예시입니다.
+
+[GitHub Actions 가이드](https://docs.github.com/en/actions/get-started/understanding-github-actions)를 참고하여 workflow를 작성하세요.
+workflow는 저장소의 `.github/workflows/` 에 생성됩니다. 
+
 
 ```yaml
 name: OLIVE CLI Scanner
@@ -45,28 +63,30 @@ jobs:
           olive-token: ${{ secrets.OLIVE_TOKEN }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
 ```
-### 출력값
 
-| 이름 | 설명 |
-|------|------|
-| `olive-version` | 사용된 OLIVE CLI 버전 |
-| `analysis-completed` | 분석 완료 여부 (true/false) |
-| `artifact-urls` | 업로드된 아티팩트가 있는 GitHub Actions 실행 URL |
 
-## 다양한 사용법 예시
+## 입력값 (Inputs)
 
-### 선택 입력값
+Action의 동작을 제어하기 위한 입력값입니다. `with` 키워드를 사용하여 설정할 수 있습니다.
 
-| 이름 | 설명 | 기본값 |
-|------|------|--------|
-| `olive-project-name` | Olive 프로젝트 이름 | 저장소 이름<br>(예: 'kakao/repo'의 경우 'repo') |
-| `source-path` | 분석할 소스코드 경로 | `./` |
-| `user-config-path` | 사용자 정의 config 파일(user-config.yaml) 경로<br>이 파일은 OLIVE CLI의 `-c` 옵션으로 전달되어 기본 설정을 오버라이드합니다. | `""` (사용하지 않음) |
-| `artifact-retention-days` | 아티팩트 보관 기간(일) | `30` |
-| `comment-on-pr` | PR에 코멘트 작성 여부 | `true` |
-| `analyze-only` | 분석을 수행한 결과를 [OLIVE Platform](https://olive.kakao.com/)에 프로젝트를 생성해서 반영할지 여부<br>분석된 결과를 [OLIVE Platform](https://olive.kakao.com/)에서 확인할 수 있습니다.<br>OLIVE Platform에 프로젝트 생성은 최대 5개까지 가능합니다. | `false` |
 
-### 입력값 설정 변경하기 
+| 이름 | 설명 | 필수 | 기본값 |
+| :--- | :--- | :---: | :--- |
+| `olive-token` | [OLIVE Platform](https://olive.kakao.com/) API 토큰. GitHub Secrets에 저장하여 사용해야 합니다. | **Y** | - |
+| `github-token` | PR에 코멘트를 작성하기 위한 GitHub 토큰입니다. `${{ secrets.GITHUB_TOKEN }}` 사용을 권장합니다. | **Y** | - |
+| `olive-project-name` | OLIVE Platform에 등록될 프로젝트 이름입니다. | No | 저장소 이름 (`kakao/olive`의 경우 olive) |
+| `source-path` | 분석할 소스코드의 루트 경로입니다. | N | `./` |
+| `user-config-path` | OLIVE CLI의 기본 설정을 덮어쓸 사용자 정의 `config` 파일의 경로입니다. | N | `""` |
+| `artifact-retention-days` | 생성된 아티팩트의 보관 기간(일)입니다. | N | `30` |
+| `comment-on-pr` | `true`로 설정 시, PR에 분석 결과 코멘트를 작성합니다. | N | `true` |
+| `analyze-only` | `true`로 설정 시, 분석만 수행하고 결과를 OLIVE Platform에 전송하지 않습니다. | N | `false` |
+
+
+## 다양한 사용법 예시 (Advanced Usage)
+
+### 1\. 입력값 설정하기
+
+프로젝트 이름, 소스 경로, 아티팩트 보관 기간 등을 직접 지정할 수 있습니다.
 
 ```yaml
 - name: Run OLIVE CLI Scanner with custom settings
@@ -80,7 +100,9 @@ jobs:
     comment-on-pr: "true"  # PR에 코멘트 작성 여부
 ```
 
-### 분석만 수행하기 
+### 2\. 분석만 수행하기 (OLIVE Platform에 결과 미전송)
+
+`analyze-only`를 `true`로 설정하면, OLIVE Platform에 프로젝트를 생성하거나 결과를 전송하지 않고 분석만 수행합니다.
 
 ```yaml
 - name: Run OLIVE CLI Scanner (analysis only)
@@ -91,10 +113,10 @@ jobs:
     analyze-only: "true"
 ```
 
-### 사용자 정의 config 파일 사용하기
+### 3\. 사용자 정의 `config` 파일 사용하기
 
-사용자 정의 Config 파일은 github project 내에 존재해야 합니다.  
-아래 예시에서는 github project 최상단에 user-config.yaml 파일이 있는 상황입니다.
+프로젝트에 사용자 정의 config 파일을 생성하여 OLIVE CLI의 세부 동작을 제어할 수 있습니다.
+아래 예시는 프로젝트 루트에 `user-config.yaml` 파일을 사용하는 경우 입니다.
 
 ```yaml
 - name: Run OLIVE CLI Scanner with custom config
@@ -105,7 +127,7 @@ jobs:
     user-config-path: "./user-config.yaml"
 ```
 
-사용자 정의 config 파일(user-config.yaml) 예시:
+**`user-config.yaml` 파일 예시:**
 
 ```yaml
 isOpenSource: false  # 소스 코드 공개 여부 (기본값: false)
@@ -120,41 +142,49 @@ excludeGradle:  # Gradle 빌드 수행시 제외할 모듈 이름
   - ":app"
 ```
 
-## Actions 실행 결과
+## 실행 결과 (Results)
 
-이 액션은 다음과 같은 아티팩트를 생성합니다:
+Action이 성공적으로 실행되면 다음과 같은 결과를 확인할 수 있습니다.
 
-- **local-config.yaml**: OLIVE CLI 설정 파일
-- **dependency-analysis**: 의존성 분석 결과
-  - dependency.csv: CSV 형식의 의존성 목록
-  - dependency.json: JSON 형식의 의존성 상세 정보
-- **apply-analysis**: 적용 분석 결과
-  - dependency.csv: CSV 형식의 적용 의존성 목록
-  - dependency.json: JSON 형식의 적용 의존성 상세 정보
-  - mapping.csv: CSV 형식의 적용 매핑 목록
-  - mapping.json: JSON 형식의 적용 매핑 상세 정보
-  - unmapping.csv: CSV 형식의 언매핑 목록
 
-## PR 코멘트
+### 1\. GitHub Artifacts
 
-PR에 자동으로 생성되는 코멘트는 다음 정보를 포함합니다:
+  * **local-config.yaml**: Action 실행에 사용된 OLIVE CLI 설정 파일
 
-- OLIVE CLI 버전
-- 프로젝트 이름
-- 상세 로그 링크
-- 라이선스 정보
-- 컴포넌트 매핑 정보
-- 언매핑 의존성 정보
-- 생성된 아티팩트 목록 (테이블 형식)
+  * 의존성 분석 결과
 
-기존 코멘트가 있는 경우 업데이트되며, 없는 경우 새로 생성됩니다.
+      * `dependency.csv`, `dependency.json`
+
+  * 의존성을 OLIVE 컴포넌트에 매핑한 결과
+
+      * `mapping.json` : 모든 데이터(매핑 및 매핑되지 않은 데이터 전체)의 모든 필드
+      * `mapping.csv` : 매핑된 데이터의 정제된 필드
+      * `unmapping.csv` : 매핑되지 않은 데이터의 정제된 필드
+
+
+
+### 2\. Pull Request 코멘트
+
+`comment-on-pr`이 `true`일 경우, PR에 아래 정보를 포함한 코멘트가 자동으로 생성되거나 업데이트됩니다.
+
+  * OLIVE CLI 버전 및 프로젝트 이름
+
+  * Action 실행 로그 링크
+
+  * 라이선스 및 컴포넌트 매핑 정보 요약
+
+  * 매핑되지 않은 의존성 목록
+
+  * 생성된 아티팩트 목록
+
+
 
 ## 참고사항
 
-- 이 액션은 github.com에 정의된 github action 정책을 따릅니다.
-- 이 액션은 Docker가 실행 가능한 러너에서 실행되어야 합니다
-- OLIVE API 토큰이 유효해야 합니다. [토큰 사용하기 안내 참고](https://olive.kakao.com/docs/my-page/token)
-- 액션이 실패한 경우 다음의 [GITHUB ACTION 실패 가이드](https://olive.kakao.com//docs/cli/github-actions-error)를 참고하여 문제를 해결할 수 있습니다.
+  * **실패 가이드**: Action 실행이 실패하는 경우, [OLIVE Action 실패 가이드](https://olive.kakao.com/docs/olive-action/olive-action-error)를 참고하여 문제를 해결할 수 있습니다.
+
+  * **GitHub 정책**: 이 Action은 github.com에 정의된 GitHub Actions 정책을 따릅니다.
+
 
 ## License
 
