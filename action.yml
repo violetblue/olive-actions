@@ -121,11 +121,7 @@ runs:
       shell: bash
       run: |
         docker exec olive-container sh -c "/olive-scripts/olive_cli_analyze.sh"
-        if [ -n "$GITHUB_OUTPUT" ] && [ -f "$GITHUB_OUTPUT" ]; then
-          echo "completed=true" >> $GITHUB_OUTPUT
-        else
-          echo "::set-output name=completed::true"
-        fi
+        echo "completed=true" >> $GITHUB_OUTPUT
 
     - name: Upload dependency analysis results
       if: inputs.analyze-only == 'false'
@@ -143,22 +139,14 @@ runs:
       shell: bash
       run: |
         docker exec olive-container sh -c "/olive-scripts/olive_cli_component.sh"
-        if [ -n "$GITHUB_OUTPUT" ] && [ -f "$GITHUB_OUTPUT" ]; then
-          echo "completed=true" >> $GITHUB_OUTPUT
-        else
-          echo "::set-output name=completed::true"
-        fi
+        echo "completed=true" >> $GITHUB_OUTPUT
 
     - name: Step 5 - OLIVE CLI license
       id: analyze-license
       shell: bash
       run: |
         docker exec olive-container sh -c "/olive-scripts/olive_cli_license.sh"
-        if [ -n "$GITHUB_OUTPUT" ] && [ -f "$GITHUB_OUTPUT" ]; then
-          echo "completed=true" >> $GITHUB_OUTPUT
-        else
-          echo "::set-output name=completed::true"
-        fi
+        echo "completed=true" >> $GITHUB_OUTPUT
 
     - name: Step 6 - OLIVE CLI apply
       if: inputs.analyze-only == 'false'
@@ -166,11 +154,7 @@ runs:
       shell: bash
       run: |
         docker exec olive-container sh -c "/olive-scripts/olive_cli_apply.sh"
-        if [ -n "$GITHUB_OUTPUT" ] && [ -f "$GITHUB_OUTPUT" ]; then
-          echo "completed=true" >> $GITHUB_OUTPUT
-        else
-          echo "::set-output name=completed::true"
-        fi
+        echo "completed=true" >> $GITHUB_OUTPUT
 
     - name: Upload apply results
       if: inputs.analyze-only == 'false'

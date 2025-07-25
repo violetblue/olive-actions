@@ -10,11 +10,7 @@ if [[ $OLIVE_VERSION == *"Unable to find"* ]] || [[ $OLIVE_VERSION == *"Error"* 
   OLIVE_VERSION="Version information unavailable"
 fi
 
-if [ -n "$GITHUB_OUTPUT" ] && [ -f "$GITHUB_OUTPUT" ]; then
-  echo "version=$OLIVE_VERSION" >> $GITHUB_OUTPUT
-else
-  echo "::set-output name=version::$OLIVE_VERSION"
-fi
+echo "version=$OLIVE_VERSION" >> $GITHUB_OUTPUT
 
 mkdir -p /home/deploy/repository/.olive/1
 echo "$OLIVE_VERSION" > /home/deploy/repository/.olive/1/olive_version.txt
