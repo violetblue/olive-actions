@@ -1,6 +1,10 @@
 #!/bin/bash
 set -e
 
+echo "════════════════════════════════════════════════════════════════════════════════"
+echo "🔍 STEP 0: Repository Information Display"
+echo "════════════════════════════════════════════════════════════════════════════════"
+
 GITHUB_REPOSITORY=""
 GITHUB_BRANCH=""
 GITHUB_COMMIT=""
@@ -36,4 +40,8 @@ echo "🌿 Branch: $GITHUB_BRANCH"
 echo "📋 Commit: $GITHUB_COMMIT"
 echo "📊 Workspace contents:"
 ls -la $WORKSPACE
+
+echo "════════════════════════════════════════════════════════════════════════════════"
+echo "✅ Repository Information Display Complete"
+echo "════════════════════════════════════════════════════════════════════════════════"
 echo "" 

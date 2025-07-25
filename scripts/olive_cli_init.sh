@@ -5,6 +5,7 @@ PROJECT_NAME=""
 OLIVE_TOKEN=""
 SOURCE_PATH=""
 USER_CONFIG_PATH=""
+DEBUG="false"
 
 while [[ $# -gt 0 ]]; do
   case $1 in
@@ -24,6 +25,10 @@ while [[ $# -gt 0 ]]; do
       USER_CONFIG_PATH="$2"
       shift 2
       ;;
+    --debug)
+      DEBUG="$2"
+      shift 2
+      ;;
     *)
       echo "알 수 없는 옵션: $1"
       exit 1
@@ -31,14 +36,26 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
-echo '📋 Step 2: Initializing Olive CLI...'
+echo "════════════════════════════════════════════════════════════════════════════════"
+echo "🔧 STEP 4: OLIVE CLI Initialization"
+echo "════════════════════════════════════════════════════════════════════════════════"
+echo '📋 Initializing Olive CLI...'
+
+# debug 옵션 설정
+DEBUG_OPTION=""
+if [ "$DEBUG" = "true" ]; then
+  DEBUG_OPTION="-d=true"
+  echo "🐛 디버그 모드가 활성화되었습니다."
+else
+  echo "📝 일반 모드로 실행합니다."
+fi
 
 if [ -n "$USER_CONFIG_PATH" ] && [ -f "$USER_CONFIG_PATH" ]; then
   echo "🔧 사용자 정의 config 파일을 사용합니다: $USER_CONFIG_PATH"
-  olive-cli init "$PROJECT_NAME" -t=$OLIVE_TOKEN -s $SOURCE_PATH -f -d -c $USER_CONFIG_PATH
+  olive-cli init "$PROJECT_NAME" -t=$OLIVE_TOKEN -s $SOURCE_PATH -f $DEBUG_OPTION -c $USER_CONFIG_PATH
 else
   echo "🔧 기본 설정으로 초기화합니다."
-  olive-cli init "$PROJECT_NAME" -t=$OLIVE_TOKEN -s $SOURCE_PATH -f -d
+  olive-cli init "$PROJECT_NAME" -t=$OLIVE_TOKEN -s $SOURCE_PATH -f $DEBUG_OPTION
 fi
 
 if [ $? -ne 0 ]; then
@@ -64,3 +81,8 @@ if [ -f "$LOCAL_CONFIG_FILE" ]; then
 else
   echo '⚠️ 경고: local-config.yaml 파일을 찾을 수 없습니다. jdk11Home 설정을 건너뜁니다.'
 fi
+
+echo "════════════════════════════════════════════════════════════════════════════════"
+echo "✅ OLIVE CLI Initialization Complete"
+echo "════════════════════════════════════════════════════════════════════════════════"
+echo ""

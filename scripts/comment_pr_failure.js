@@ -24,13 +24,14 @@ module.exports = async ({ github, context, core }) => {
   function generateFailureCommentBody(data) {
     return (
       "## 🛡️ OLIVE CLI 스캔\n\n" +
+      "❌ **OLIVE CLI 스캔이 실패했습니다. 상세 로그에서 확인하실 수 있습니다.**\n\n" +
       "- 🎯 프로젝트 이름: `" +
       data.projectName +
       "`\n" +
       "- 🔗 상세 로그: [GitHub Actions 실행 결과](" +
       data.runUrl +
-      ")\n\n" +
-      "❌ **OLIVE CLI 스캔이 실패했습니다. 상세 로그에서 확인하실 수 있습니다.**\n\n"
+      ")\n" +
+      "- 💡 FAQ: [OLIVE CLI 실행 에러](https://olive.kakao.com/docs/cli/faq)\n\n"
     )
   }
 

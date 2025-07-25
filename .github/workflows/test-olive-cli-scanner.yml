@@ -1,4 +1,4 @@
-name: Olive CLI Scanner Test
+name: Olive Scanner Test
 
 on:
   pull_request:
@@ -16,6 +16,11 @@ on:
         options:
           - "true"
           - "false"
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
 
 jobs:
   olive-scan:

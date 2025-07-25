@@ -27,8 +27,4 @@ while [[ $# -gt 0 ]]; do
 done
 
 RUN_URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
-if [ -n "$GITHUB_OUTPUT" ] && [ -f "$GITHUB_OUTPUT" ]; then
-  echo "urls=$RUN_URL" >> $GITHUB_OUTPUT
-else
-  echo "::set-output name=urls::$RUN_URL"
-fi 
+echo "urls=$RUN_URL" >> $GITHUB_OUTPUT 

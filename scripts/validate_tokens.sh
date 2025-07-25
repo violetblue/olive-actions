@@ -2,20 +2,20 @@
 set -e
 
 echo "════════════════════════════════════════════════════════════════════════════════"
-echo "📝 STEP 2: Project Name Setting"
+echo "🔐 STEP 1: Required Tokens Validation"
 echo "════════════════════════════════════════════════════════════════════════════════"
 
-INPUT_PROJECT_NAME=""
-GITHUB_REPOSITORY=""
+GITHUB_TOKEN=""
+OLIVE_TOKEN=""
 
 while [[ $# -gt 0 ]]; do
   case $1 in
-    --project-name)
-      INPUT_PROJECT_NAME="$2"
+    --github-token)
+      GITHUB_TOKEN="$2"
       shift 2
       ;;
-    --repository)
-      GITHUB_REPOSITORY="$2"
+    --olive-token)
+      OLIVE_TOKEN="$2"
       shift 2
       ;;
     *)
@@ -25,16 +25,38 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
-if [ -z "$INPUT_PROJECT_NAME" ]; then
-  PROJECT_NAME=$(echo "$GITHUB_REPOSITORY" | cut -d'/' -f2)
-  echo "프로젝트 이름이 지정되지 않아 저장소 이름으로 자동 생성: $PROJECT_NAME"
-else
-  PROJECT_NAME="$INPUT_PROJECT_NAME"
-  echo "지정된 프로젝트 이름 사용: $PROJECT_NAME"
+echo "🔐 필수 토큰 확인 중..."
+
+if [ -z "$GITHUB_TOKEN" ]; then
+  echo "❌ github-token이 설정되지 않았습니다."
+  echo ""
+  echo "📋 해결 방법:"
+  echo "1. workflow 파일에서 github-token을 설정해주세요:"
+  echo "   with:"
+  echo "     github-token: \${{ secrets.GITHUB_TOKEN }}"
+  echo ""
+  exit 1
 fi
-echo "project-name=$PROJECT_NAME" >> $GITHUB_OUTPUT
+
+if [ -z "$OLIVE_TOKEN" ]; then
+  echo "❌ olive-token이 설정되지 않았습니다."
+  echo ""
+  echo "📋 해결 방법:"
+  echo "1. Repository Settings > Secrets and variables > Actions로 이동"
+  echo "2. New repository secret을 클릭"
+  echo "3. Name: OLIVE_TOKEN, Value: 당신의 OLIVE 토큰을 입력"
+  echo "4. workflow 파일에서 다음과 같이 설정:"
+  echo "   with:"
+  echo "     olive-token: \${{ secrets.OLIVE_TOKEN }}"
+  echo ""
+  echo "🔗 OLIVE 토큰 발급: https://olive.kakao.com"
+  echo ""
+  exit 1
+fi
+
+echo "✅ 모든 필수 토큰이 설정되었습니다."
 
 echo "════════════════════════════════════════════════════════════════════════════════"
-echo "✅ Project Name Setting Complete"
+echo "✅ Required Tokens Validation Complete"
 echo "════════════════════════════════════════════════════════════════════════════════"
 echo "" 
