@@ -74,7 +74,7 @@ Action의 동작을 제어하기 위한 입력값입니다. `with` 키워드를 
 | :--- | :--- | :---: | :--- |
 | `olive-token` | [OLIVE Platform](https://olive.kakao.com/) API 토큰. GitHub Secrets에 저장하여 사용해야 합니다. | **Y** | - |
 | `github-token` | PR에 코멘트를 작성하기 위한 GitHub 토큰입니다. `${{ secrets.GITHUB_TOKEN }}` 사용을 권장합니다. | **Y** | - |
-| `olive-project-name` | OLIVE Platform에 등록될 프로젝트 이름입니다. | No | 저장소 이름 (`kakao/olive`의 경우 olive) |
+| `olive-project-name` | OLIVE Platform에 등록될 프로젝트 이름입니다. | N | 저장소 이름 (`kakao/olive`의 경우 olive) |
 | `source-path` | 분석할 소스코드의 루트 경로입니다. | N | `./` |
 | `user-config-path` | OLIVE CLI의 기본 설정을 덮어쓸 사용자 정의 `config` 파일의 경로입니다. | N | `""` |
 | `artifact-retention-days` | 생성된 아티팩트의 보관 기간(일)입니다. | N | `30` |
