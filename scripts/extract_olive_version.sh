@@ -4,7 +4,7 @@ set -e
 echo "════════════════════════════════════════════════════════════════════════════════"
 echo "📦 STEP 9: OLIVE CLI Version Extraction"
 echo "════════════════════════════════════════════════════════════════════════════════"
-echo "🔍 Extracting Olive CLI version..."
+echo "🔍 Extracting OLIVE CLI version..."
 OLIVE_VERSION=$(olive-cli --version 2>&1 | head -n1 | sed 's/^[[:space:]]*//' | sed 's/[[:space:]]*$//')
 if [[ $OLIVE_VERSION == *"Unable to find"* ]] || [[ $OLIVE_VERSION == *"Error"* ]]; then
   OLIVE_VERSION="Version information unavailable"
@@ -15,7 +15,7 @@ echo "version=$OLIVE_VERSION" >> $GITHUB_OUTPUT
 mkdir -p /home/deploy/repository/.olive/1
 echo "$OLIVE_VERSION" > /home/deploy/repository/.olive/1/olive_version.txt
 
-echo "📦 Olive CLI Version: $OLIVE_VERSION"
+echo "📦 OLIVE CLI Version: $OLIVE_VERSION"
 
 echo "════════════════════════════════════════════════════════════════════════════════"
 echo "✅ OLIVE CLI Version Extraction Complete"

@@ -8,7 +8,7 @@ echo '📋 Running apply on repository...'
 olive-cli apply
 
 if [ $? -ne 0 ]; then
-  echo '❌ Olive CLI apply 분석 실패: 에러가 발생했습니다.'
+  echo '❌ OLIVE CLI apply 분석 실패: 에러가 발생했습니다.'
   exit 1
 fi
 

@@ -1,4 +1,4 @@
-name: Olive Scanner Test
+name: OLIVE Scanner Test
 
 on:
   pull_request:
@@ -24,7 +24,7 @@ permissions:
 
 jobs:
   olive-scan:
-    name: Olive CLI Scan Test
+    name: OLIVE CLI Scan Test
     runs-on: ubuntu-latest
     outputs:
       olive-version: ${{ steps.olive-cli-scanner.outputs.olive-version }}
@@ -35,7 +35,7 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Run Olive CLI Scanner
+      - name: Run OLIVE CLI Scanner
         id: olive-cli-scanner
         uses: ./
         with:
@@ -51,8 +51,8 @@ jobs:
     steps:
       - name: Check Analysis Results
         run: |
-          echo "✅ Olive CLI 분석이 완료되었습니다."
-          echo "📦 사용된 Olive CLI 버전: ${{ needs.olive-scan.outputs.olive-version }}"
+          echo "✅ OLIVE CLI 분석이 완료되었습니다."
+          echo "📦 사용된 OLIVE CLI 버전: ${{ needs.olive-scan.outputs.olive-version }}"
           echo "🔗 아티팩트 URL: ${{ needs.olive-scan.outputs.artifact-urls }}"
 
       - name: Download Analysis Results
@@ -129,7 +129,7 @@ jobs:
 
       - name: Check Configuration Settings
         run: |
-          echo "📝 Olive 설정 파일 확인:"
+          echo "📝 OLIVE 설정 파일 확인:"
           ls -la ./olive-config/
 
           if [ -f "./olive-config/local-config.yaml" ]; then

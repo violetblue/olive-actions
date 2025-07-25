@@ -8,7 +8,7 @@ echo '📋 Running analysis on repository...'
 olive-cli analyze --mapping
 
 if [ $? -ne 0 ]; then
-  echo '❌ Olive CLI 분석 실패: 에러가 발생했습니다.'
+  echo '❌ OLIVE CLI 분석 실패: 에러가 발생했습니다.'
   exit 1
 fi
 
