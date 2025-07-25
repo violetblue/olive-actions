@@ -9,7 +9,7 @@ echo '📋 Running license on repository...'
 TEMP_LOG_FILE=$(mktemp)
 
 if ! olive-cli license | tee "$TEMP_LOG_FILE"; then
-  echo '❌ Olive CLI license 분석 실패: 에러가 발생했습니다.'
+  echo '❌ OLIVE CLI license 분석 실패: 에러가 발생했습니다.'
   rm -f "$TEMP_LOG_FILE"
   exit 1
 fi

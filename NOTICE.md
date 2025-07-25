@@ -1,4 +1,4 @@
-# OSS Notice | Olive-Actions #
+# OSS Notice | OLIVE-Action
 
 This application is Copyright © Kakao Corp. All rights reserved.
 
@@ -6,7 +6,7 @@ The following sets forth attribution notices for third party software that may b
 
 If you have any questions about these notices, please email us at [opensource@kakaocorp.com][opensource_kakaocorp.com]
 
- **Android Platform Tools**
+**Android Platform Tools**
 
 https://developer.android.com/tools
 
@@ -14,7 +14,7 @@ Copyright (c) 2005-2024 The Android Open Source Project
 
 Android Software Development Kit License Agreement
 
- **Bower**
+**Bower**
 
 https://github.com/bower/bower
 
@@ -22,7 +22,7 @@ Copyright 2013-present Twitter and other contributors
 
 MIT License
 
- **Cargo**
+**Cargo**
 
 https://github.com/rust-lang/cargo
 
@@ -30,7 +30,7 @@ Copyright (c) 2014 The Rust Project Developers
 
 Apache License 2.0MIT License
 
- **CocoaPods**
+**CocoaPods**
 
 https://github.com/cocoapods/cocoapods
 
@@ -38,7 +38,7 @@ Copyright 2011 Eloy DurÃ¡n <eloy.de.enige@gmail.com> and Contributors.
 
 MIT License
 
- **Composer**
+**Composer**
 
 https://github.com/composer/composer
 
@@ -46,7 +46,7 @@ Copyright (c) 2016 Nils Adermann; Jordi Boggiano
 
 MIT License
 
- **Conan Package Tools**
+**Conan Package Tools**
 
 https://github.com/conan-io/conan-package-tools
 
@@ -54,7 +54,7 @@ Copyright (c) 2015 Luis Martinez de Bartolome
 
 MIT License
 
- **coreutils**
+**coreutils**
 
 https://www.gnu.org/software/coreutils/
 
@@ -62,7 +62,7 @@ Copyright (c) 1985-2024 Free Software Foundation
 
 GNU General Public License v3.0 or later
 
- **curl**
+**curl**
 
 https://github.com/curl/curl
 
@@ -70,7 +70,7 @@ Copyright 1996 - 2022, Daniel Stenberg, <daniel@haxx.se>, and many contributors,
 
 curl License
 
- **Dart**
+**Dart**
 
 https://github.com/dart-lang/sdk
 
@@ -78,7 +78,7 @@ Copyright 2012, the Dart project authors.
 
 BSD 3-Clause "New" or "Revised" License
 
- **Eclipse Temurin JDK 17**
+**Eclipse Temurin JDK 17**
 
 [https://adoptium.net/temurin ][https_adoptium.net_temurin]
 
@@ -86,7 +86,7 @@ Copyright (c) Eclipse Adoptium
 
 GNU General Public License v2.0 w/Classpath exception
 
- **Flutter**
+**Flutter**
 
 https://github.com/flutter/flutter
 
@@ -94,7 +94,7 @@ Copyright 2014 The Flutter Authors.
 
 BSD 3-Clause "New" or "Revised" License
 
- **Git**
+**Git**
 
 https://github.com/git/git
 
@@ -102,7 +102,7 @@ Copyright 1989, 1991 Free Software Foundation, Inc.,
 
 GNU General Public License v2.0 or later
 
- **Git Large File Storage**
+**Git Large File Storage**
 
 https://github.com/git-lfs/git-lfs
 
@@ -112,7 +112,7 @@ Copyright (c) 2014- GitHub, Inc. and Git LFS contributors
 
 BSD 3-Clause "New" or "Revised" LicenseMIT License
 
- **GNU Wget**
+**GNU Wget**
 
 https://www.gnu.org/software/wget
 
@@ -120,7 +120,7 @@ Copyright (c) 1996-2024 Free Software Foundation
 
 GNU General Public License v3.0 or later
 
- **Gradle**
+**Gradle**
 
 https://services.gradle.org
 
@@ -128,7 +128,7 @@ Copyright (c) 2007-2024 Gradle Inc.
 
 Apache License 2.0
 
- **libarchive-tools**
+**libarchive-tools**
 
 https://www.libarchive.org/
 
@@ -136,7 +136,7 @@ Copyright (c) 2003-2024 Tim Kientzle
 
 BSD 2-Clause "Simplified" License
 
- **Mercurial**
+**Mercurial**
 
 https://www.mercurial-scm.org/
 
@@ -144,7 +144,7 @@ Copyright (c) 2005-2024 Olivia Mackall and others
 
 GNU General Public License v2.0 or later
 
- **Node.js**
+**Node.js**
 
 https://github.com/nodejs/nodejs.org
 
@@ -152,7 +152,7 @@ Copyright Node.js Website WG contributors. All rights reserved.
 
 MIT License
 
- **npm**
+**npm**
 
 https://github.com/npm/cli
 
@@ -160,7 +160,7 @@ Copyright property of respective owners
 
 Artistic License 2.0
 
- **Olive CLI**
+**OLIVE CLI**
 
 https://github.com/kakao/olive-cli
 
@@ -168,7 +168,7 @@ Copyright (c) Kakao Corp.
 
 Apache License 2.0
 
- **OpenSSL**
+**OpenSSL**
 
 https://github.com/openssl/openssl
 
@@ -178,7 +178,7 @@ Copyright 1995-1998 Eric A. Young, Tim J. Hudson
 
 Apache License 2.0
 
- **OSS Review Toolkit**
+**OSS Review Toolkit**
 
 https://github.com/oss-review-toolkit/ort
 
@@ -186,7 +186,7 @@ Copyright (C) 2017-2024 The ORT Project Authors.
 
 Apache License 2.0
 
- **pnpm**
+**pnpm**
 
 https://github.com/pnpm/pnpm
 
@@ -196,7 +196,7 @@ Copyright (c) 2016-2025 Zoltan Kochan and other contributors
 
 MIT License
 
- **Poetry**
+**Poetry**
 
 https://github.com/python-poetry/poetry
 
@@ -204,7 +204,7 @@ Copyright 2018-present SÃ©bastien Eustace
 
 MIT License
 
- **Python**
+**Python**
 
 https://www.python.org
 
@@ -212,7 +212,7 @@ Copyright (c) 2001-2024 Python Software Foundation
 
 Python Software Foundation License 2.0
 
- **Python Inspector**
+**Python Inspector**
 
 [https://github.com/aboutcode-org/python-inspector ][https_github.com_aboutcode-org_python-inspector]
 
@@ -220,7 +220,7 @@ Copyright (c) nexB Inc.
 
 Apache License 2.0
 
- **rbenv**
+**rbenv**
 
 https://github.com/rbenv/rbenv
 
@@ -228,7 +228,7 @@ Copyright (c) 2013 Sam Stephenson
 
 MIT License
 
- **repo tools**
+**repo tools**
 
 https://android.googlesource.com/tools/repo
 
@@ -236,7 +236,7 @@ Copyright (c) 2008-2024 The Android Open Source Project
 
 Apache License 2.0
 
- **rsync**
+**rsync**
 
 https://rsync.samba.org/
 
@@ -244,7 +244,7 @@ Copyright (c) 1996-2024 Andrew Tridgell and Paul Mackerras
 
 GNU General Public License v3.0 or later
 
- **Ruby**
+**Ruby**
 
 https://www.ruby-lang.org
 
@@ -252,7 +252,7 @@ Copyright (c) 1993-2024 Yukihiro Matsumoto
 
 Ruby License
 
- **rust**
+**rust**
 
 https://github.com/rust-lang/rust
 
@@ -260,7 +260,7 @@ Copyright property of respective owners.
 
 Apache License 2.0MIT License
 
- **Rustup**
+**Rustup**
 
 https://github.com/rust-lang/rustup
 
@@ -268,7 +268,7 @@ Copyright (c) 2016 The Rust Project Developers
 
 Apache License 2.0MIT License
 
- **sbt**
+**sbt**
 
 https://github.com/sbt/sbt
 
@@ -280,7 +280,7 @@ Copyright (c) 2008 - 2010, Mark Harrah
 
 Apache License 2.0
 
- **ScanCode toolkit**
+**ScanCode toolkit**
 
 https://github.com/nexb/scancode-toolkit
 
@@ -288,7 +288,7 @@ Copyright nexB Inc. and others.
 
 Apache License 2.0Creative Commons Attribution 4.0 International
 
- **setuptools**
+**setuptools**
 
 https://github.com/pypa/setuptools
 
@@ -296,7 +296,7 @@ Copyright 2016 Jason R Coombs <jaraco@jaraco.com>
 
 MIT License
 
- **Simple Python Version Management: pyenv**
+**Simple Python Version Management: pyenv**
 
 https://github.com/pyenv/pyenv
 
@@ -306,7 +306,7 @@ Copyright (c) 2013 Sam Stephenson
 
 MIT License
 
- **Subversion**
+**Subversion**
 
 https://subversion.apache.org/
 
@@ -314,7 +314,7 @@ Copyright (c) 2000-2024 The Apache Software Foundation
 
 Apache License 2.0
 
- **The GNU C++ Library**
+**The GNU C++ Library**
 
 https://gcc.gnu.org/git/?p=gcc.git;a=tree;f=libstdc%2B%2B-v3;hb=HEAD
 
@@ -322,7 +322,7 @@ Copyright 2009 Free Software Foundation, Inc.
 
 GNU General Public License v3.0 w/GCC Runtime Library exception
 
- **Yarn**
+**Yarn**
 
 https://github.com/yarnpkg/berry
 
@@ -330,9 +330,9 @@ Copyright (c) 2016-present, Yarn Contributors. All rights reserved.
 
 BSD 2-Clause "Simplified" License
 
-# Android Software Development Kit License Agreement #
+# Android Software Development Kit License Agreement
 
-``````````
+```
 This is the Android Software Development Kit License Agreement
 
 1. Introduction
@@ -662,11 +662,11 @@ jurisdiction.
 
 
 November 20, 2015
-``````````
+```
 
-# Apache License 2.0 #
+# Apache License 2.0
 
-``````````
+```
 Apache License
 Version 2.0, January 2004
 http://www.apache.org/licenses/
@@ -740,11 +740,11 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-``````````
+```
 
-# Artistic License 2.0 #
+# Artistic License 2.0
 
-``````````
+```
 Artistic License 2.0
 
 Copyright (c) 2000-2006, The Perl Foundation.
@@ -819,11 +819,11 @@ General Provisions
 (13) This license includes the non-exclusive, worldwide, free-of-charge patent license to make, have made, use, offer to sell, sell, import and otherwise transfer the Package with respect to any patent claims licensable by the Copyright Holder that are necessarily infringed by the Package. If you institute patent litigation (including a cross-claim or counterclaim) against any party alleging that the Package constitutes direct or contributory patent infringement, then this Artistic License to you shall terminate on the date that such litigation is filed.
 
 (14) Disclaimer of Warranty: THE PACKAGE IS PROVIDED BY THE COPYRIGHT HOLDER AND CONTRIBUTORS "AS IS' AND WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES. THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT ARE DISCLAIMED TO THE EXTENT PERMITTED BY YOUR LOCAL LAW. UNLESS REQUIRED BY LAW, NO COPYRIGHT HOLDER OR CONTRIBUTOR WILL BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES ARISING IN ANY WAY OUT OF THE USE OF THE PACKAGE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-``````````
+```
 
-# BSD 2-Clause "Simplified" License #
+# BSD 2-Clause "Simplified" License
 
-``````````
+```
 Copyright (c) <year> <owner> . All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
@@ -833,11 +833,11 @@ Redistribution and use in source and binary forms, with or without modification,
    2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-``````````
+```
 
-# BSD 3-Clause "New" or "Revised" License #
+# BSD 3-Clause "New" or "Revised" License
 
-``````````
+```
 Copyright (c) <year> <owner> . All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
@@ -849,11 +849,11 @@ Redistribution and use in source and binary forms, with or without modification,
    3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-``````````
+```
 
-# Creative Commons Attribution 4.0 International #
+# Creative Commons Attribution 4.0 International
 
-``````````
+```
 Creative Commons Attribution 4.0 International
 
  Creative Commons Corporation (â€œCreative Commonsâ€) is not a law firm and does not provide legal services or legal advice. Distribution of Creative Commons public licenses does not create a lawyer-client or other relationship. Creative Commons makes its licenses and related information available on an â€œas-isâ€ basis. Creative Commons gives no warranties regarding its licenses, any material licensed under their terms and conditions, or any related information. Creative Commons disclaims all liability for damages resulting from their use to the fullest extent possible.
@@ -1010,11 +1010,11 @@ Section 8 â€“ Interpretation.
 Creative Commons is not a party to its public licenses. Notwithstanding, Creative Commons may elect to apply one of its public licenses to material it publishes and in those instances will be considered the â€œLicensor.â€ Except for the limited purpose of indicating that material is shared under a Creative Commons public license or as otherwise permitted by the Creative Commons policies published at creativecommons.org/policies, Creative Commons does not authorize the use of the trademark â€œCreative Commonsâ€ or any other trademark or logo of Creative Commons without its prior written consent including, without limitation, in connection with any unauthorized modifications to any of its public licenses or any other arrangements, understandings, or agreements concerning use of licensed material. For the avoidance of doubt, this paragraph does not form part of the public licenses.
 
 Creative Commons may be contacted at creativecommons.org.
-``````````
+```
 
-# curl License #
+# curl License
 
-``````````
+```
 COPYRIGHT AND PERMISSION NOTICE
 
 Copyright (c) 1996 - 2022, Daniel Stenberg, <daniel@haxx.se>, and many
@@ -1037,11 +1037,11 @@ OR OTHER DEALINGS IN THE SOFTWARE.
 Except as contained in this notice, the name of a copyright holder shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization of the copyright holder.
-``````````
+```
 
-# GNU General Public License v2.0 or later #
+# GNU General Public License v2.0 or later
 
-``````````
+```
 GNU GENERAL PUBLIC LICENSE
 
 Version 2, June 1991
@@ -1163,11 +1163,11 @@ You should also get your employer (if you work as a programmer) or your school, 
 Yoyodyne, Inc., hereby disclaims all copyright interest in the program `Gnomovision' (which makes passes at compilers) written by James Hacker.
 
 < signature of Ty Coon > , 1 April 1989 Ty Coon, President of Vice This General Public License does not permit incorporating your program into proprietary programs. If your program is a subroutine library, you may consider it more useful to permit linking proprietary applications with the library. If this is what you want to do, use the GNU Lesser General Public License instead of this License.
-``````````
+```
 
-# GNU General Public License v2.0 w/Classpath exception #
+# GNU General Public License v2.0 w/Classpath exception
 
-``````````
+```
 GNU GENERAL PUBLIC LICENSE
 
 Version 2, June 1991
@@ -1295,11 +1295,11 @@ Class Path Exception
 Linking this library statically or dynamically with other modules is making a combined work based on this library. Thus, the terms and conditions of the GNU General Public License cover the whole combination.
 
 As a special exception, the copyright holders of this library give you permission to link this library with independent modules to produce an executable, regardless of the license terms of these independent modules, and to copy and distribute the resulting executable under terms of your choice, provided that you also meet, for each linked independent module, the terms and conditions of the license of that module. An independent module is a module which is not derived from or based on this library. If you modify this library, you may extend this exception to your version of the library, but you are not obligated to do so. If you do not wish to do so, delete this exception statement from your version.
-``````````
+```
 
-# GNU General Public License v3.0 or later #
+# GNU General Public License v3.0 or later
 
-``````````
+```
 GNU GENERAL PUBLIC LICENSE
 
 Version 3, 29 June 2007
@@ -1551,11 +1551,11 @@ The hypothetical commands `show w' and `show c' should show the appropriate part
 You should also get your employer (if you work as a programmer) or school, if any, to sign a "copyright disclaimer" for the program, if necessary. For more information on this, and how to apply and follow the GNU GPL, see <http s ://www.gnu.org/licenses/>.
 
 The GNU General Public License does not permit incorporating your program into proprietary programs. If your program is a subroutine library, you may consider it more useful to permit linking proprietary applications with the library. If this is what you want to do, use the GNU Lesser General Public License instead of this License. But first, please read <http s ://www.gnu.org/philosophy/why-not-lgpl.html>.
-``````````
+```
 
-# GNU General Public License v3.0 w/GCC Runtime Library exception #
+# GNU General Public License v3.0 w/GCC Runtime Library exception
 
-``````````
+```
 GNU GENERAL PUBLIC LICENSE
 
 Version 3, 29 June 2007
@@ -1842,11 +1842,11 @@ When you use GCC to compile a program, GCC may combine portions of certain GCC h
    2. No Weakening of GCC Copyleft.
 
 The availability of this Exception does not imply any general presumption that third-party software is unaffected by the copyleft requirements of the license of GCC.
-``````````
+```
 
-# MIT License #
+# MIT License
 
-``````````
+```
 MIT License
 
 Copyright (c) <year> <copyright holders>
@@ -1856,11 +1856,11 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-``````````
+```
 
-# Python Software Foundation License 2.0 #
+# Python Software Foundation License 2.0
 
-``````````
+```
 1. This LICENSE AGREEMENT is between the Python Software Foundation ("PSF"), and the Individual or Organization ("Licensee") accessing and otherwise using this software ("Python") in source or binary form and its associated documentation.
 2. Subject to the terms and conditions of this License Agreement, PSF hereby grants Licensee a nonexclusive, royalty-free, world-wide license to reproduce, analyze, test, perform and/or display publicly, prepare derivative works, distribute, and otherwise use Python alone or in any derivative version, provided, however, that PSF's License Agreement and PSF's notice of copyright, i.e., "Copyright (c) 2001, 2002, 2003, 2004, 2005, 2006 Python Software Foundation; All Rights Reserved" are retained in Python alone or in any derivative version prepared by Licensee.
 3. In the event Licensee prepares a derivative work that is based on or incorporates Python or any part thereof, and wants to make the derivative work available to others as provided herein, then Licensee hereby agrees to include in any such work a brief summary of the changes made to Python.
@@ -1869,11 +1869,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 6. This License Agreement will automatically terminate upon a material breach of its terms and conditions.
 7. Nothing in this License Agreement shall be deemed to create any relationship of agency, partnership, or joint venture between PSF and Licensee. This License Agreement does not grant permission to use PSF trademarks or trade name in a trademark sense to endorse or promote products or services of Licensee, or any third party.
 8. By copying, installing or otherwise using Python, Licensee agrees to be bound by the terms and conditions of this License Agreement.
-``````````
+```
 
-# Ruby License #
+# Ruby License
 
-``````````
+```
 1. You may make and give away verbatim copies of the source form of the software without restriction, provided that you duplicate all of the original copyright notices and associated disclaimers.
 
    2. You may modify your copy of the software in any way, provided that you do at least ONE of the following:
@@ -1903,8 +1903,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
    5. The scripts and library files supplied as input to or produced as output from the software do not automatically fall under the copyright of the software, but belong to whomever generated them, and may be sold commercially, and may be aggregated with this software.
 
    6. THIS SOFTWARE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
-``````````
-
+```
 
 [opensource_kakaocorp.com]: mailto:opensource@kakaocorp.com
 [https_adoptium.net_temurin]: https://adoptium.net/temurin

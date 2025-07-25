@@ -39,7 +39,7 @@ done
 echo "════════════════════════════════════════════════════════════════════════════════"
 echo "🔧 STEP 4: OLIVE CLI Initialization"
 echo "════════════════════════════════════════════════════════════════════════════════"
-echo '📋 Initializing Olive CLI...'
+echo '📋 Initializing OLIVE CLI...'
 
 # debug 옵션 설정
 DEBUG_OPTION=""
@@ -59,7 +59,7 @@ else
 fi
 
 if [ $? -ne 0 ]; then
-  echo '❌ Olive CLI 초기화 실패: 에러가 발생했습니다.'
+  echo '❌ OLIVE CLI 초기화 실패: 에러가 발생했습니다.'
   exit 1
 fi
 

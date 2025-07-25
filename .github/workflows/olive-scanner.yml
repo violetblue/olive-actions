@@ -1,4 +1,4 @@
-name: Olive CLI Scanner Example
+name: OLIVE Action Example
 
 on:
   workflow_dispatch:
@@ -19,14 +19,14 @@ permissions:
 
 jobs:
   olive-scan:
-    name: Olive CLI Scan
+    name: OLIVE CLI Scan
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Run Olive CLI Scanner
+      - name: Run OLIVE CLI Scanner
         uses: ./
         with:
           olive-token: ${{ secrets.OLIVE_TOKEN }}
