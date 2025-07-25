@@ -44,7 +44,7 @@ echo '📋 Initializing Olive CLI...'
 # debug 옵션 설정
 DEBUG_OPTION=""
 if [ "$DEBUG" = "true" ]; then
-  DEBUG_OPTION="-d"
+  DEBUG_OPTION="-d=true"
   echo "🐛 디버그 모드가 활성화되었습니다."
 else
   echo "📝 일반 모드로 실행합니다."
