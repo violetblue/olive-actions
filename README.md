@@ -1,6 +1,6 @@
 # OLIVE Action
 
-**OLIVE Action**은 GitHub Actions에서 [OLIVE CLI](https://github.com/kakao/olive-cli)를 사용하여 오픈소스 라이선스 의무사항을 준수를 지원합니다.
+**OLIVE Action**은 GitHub Actions에서 [OLIVE CLI](https://github.com/kakao/olive-cli)를 사용하여 오픈소스 라이선스 의무사항 준수를 지원합니다.
 
 이 Action을 통해 다음을 수행할 수 있습니다.
 
